@@ -17,7 +17,7 @@ Parámetros x=55, q_x=0.01, c=1,000,000
 Objetivo:
 Hacer UNA simulación (“un universo”) y reportar:
   • B_n (número de siniestros), S_n, X̄_n, E[X] = c·q
-  • Para cada θ: P(θ), TP(θ)=n·P(θ), GN(θ)=TP(θ)−S_n
+  • Para cada θ y j: P(θ), TP(θ)=n·P(θ), GN(θ)=TP(θ)−S_n
 --------------------------------------------------------------------------------------------- =#
 
 begin
@@ -146,5 +146,6 @@ function simulateClaimsMC(; q=0.01, c=100_000, θ=[0.00, 0.05, 0.10, 0.15, 0.20]
 
     return (q=q, c=c, n=n, m=m, EX=EX, θ=θ, P=Pθ, TP=TPθ, η=η, p_above=p_above)
 end
+
 
 @time simulateClaimsMC(; q=0.01, c=100_000, θ=[0.00,0.05,0.10,0.15,0.20], n=10_000, m=1_000_000, η=0.05)
