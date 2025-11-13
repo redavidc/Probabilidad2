@@ -1,6 +1,6 @@
 ### Introducción a Convergencia de v.a's y Teoremas Límite
 ### Autor: David Reboyo
-### Versión: 2024-10.12
+### Versión: 2025-10.12
 
 #= ---------------------------------------------------------------------------------------------
 Una aseguradora ofrece un solo producto, un seguro temporal a un año, i.e. una cartera homogénea de tamaño n (todos los asegurados son de 55 años) 
@@ -149,3 +149,4 @@ end
 
 
 @time simulateClaimsMC(; q=0.01, c=100_000, θ=[0.00,0.05,0.10,0.15,0.20], n=10_000, m=1_000_000, η=0.05)
+
